@@ -1,8 +1,10 @@
+import sys
 import serial
 from mqtt_publisher import MQTT
 
 ser = serial.Serial('/dev/ttyUSB0', 9600) # Lendo os dados da porta serial
-comunicacao = MQTT("mqtt-dashboard.com")
+broker = sys.argv[1]
+comunicacao = MQTT(broker)
 
 def enviar_mensagem(msg):
     print("Enviando NTU: ", msg)
