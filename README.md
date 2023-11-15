@@ -9,7 +9,7 @@ Repositório contendo scripts e módulos para coletar e representar em um gráfi
 
 ## Instalação
 
-## Raspberry Pi e Arduino
+### Raspberry Pi e Arduino
 #### Pré-requisitos 
 - Uma conexão SSH (também é possível executar os comandos diretamente no raspberry-Pi)
 - Ubuntu 20.04 LTS 
@@ -50,4 +50,26 @@ O script pode ser enviado ao background do bash com o comando abaixo:
 nohup python3 main.py localhost &
 ```
 
-Dessa forma o script permanecerá em execução mesmo que você esteja deslogado
+Dessa forma o script permanecerá em execução mesmo que você se deslogue do servidor
+
+### Executando o Client
+
+Agora no computador que receberá os dados podemos executar o MQTT subscriber
+
+1. Entre na pasta Client 
+
+```bash
+cd sensor_turbidez_scripts/client/
+```
+
+2. Instale as dependências localmente
+
+```bash
+pip install -r ../requirements.txt
+```
+
+3. Execute o script
+
+```bash
+python3 main.py 
+```
