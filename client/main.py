@@ -22,9 +22,6 @@ def save_list_to_file(file_path, data_list):
         for item in data_list:
             file.write(str(item) + '\n')
 
-# def list_should_be_saved(data, expected_size):
-#     return True if (len(data) > expected_size) and file_was_created == False else False 
-
 def message_receiver(client, userdata, message):
     NTU = float(message.payload.decode("utf-8"))
     data.append(NTU)
