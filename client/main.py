@@ -1,7 +1,6 @@
 import paho.mqtt.client as mqtt
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import time
 
 def update(frame):
     line.set_data(range(len(data)), data)
