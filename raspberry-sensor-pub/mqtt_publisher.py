@@ -11,6 +11,6 @@ class MQTT:
         self.client.publish(topic="casa/sensor_turbidez", payload=msg)
     
     def __init__(self, host):
-        print("Criando conexão")
+        # print("Criando conexão")
         self.client, self.connection = self.conectar_client(host)
 

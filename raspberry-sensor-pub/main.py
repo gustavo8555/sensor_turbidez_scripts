@@ -7,7 +7,7 @@ broker = sys.argv[1]
 comunicacao = MQTT(broker)
 
 def enviar_mensagem(msg):
-    print("Enviando NTU: ", msg)
+    #print("Enviando NTU: ", msg)
     comunicacao.enviar_mensagem(msg)
 
 while True:
