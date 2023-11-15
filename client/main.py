@@ -9,13 +9,33 @@ def update(frame):
 def generates_graph(update):
     return FuncAnimation(fig, update, blit=True, interval=100)
 
+def save_list_to_file(file_path, data_list):
+    """
+    Saves the result to a text file.
+
+    Parameters:
+    - file_path (str): The path to the text file.
+    - data_list (list): The list to save.
+    """
+    print("----- SAVING RESULTS FILE -----")
+    with open(file_path, 'w') as file:
+        for item in data_list:
+            file.write(str(item) + '\n')
+
 def message_receiver(client, userdata, message):
     NTU = float(message.payload.decode("utf-8"))
     data.append(NTU)
     print(NTU)
+    if len(data) == expected_file_size:
+        save_list_to_file(file_path, data) # creates a file with the results
     if len(data) > 100:
         data.pop(0)  # Remove the oldest data point if the list is too long
     print("Received measurement...")
+
+## Sensor File settings
+expected_file_size = 60
+file_was_created = True
+file_path = 'sensor_data.txt'
 
 data = []
 
