@@ -18,7 +18,7 @@ Repositório contendo scripts e módulos para coletar e representar em um gráfi
 - Arduino configurado e conectado ao sensor
 - Porta COM identificada 
 
-#### Executando publisher
+#### Executando publisher no Raspeberry PI
 
 1. Clonar repositório
 
@@ -52,7 +52,7 @@ nohup python3 main.py localhost &
 
 Dessa forma o script permanecerá em execução mesmo que você se deslogue do servidor
 
-### Executando o Client
+### Executando o Client no PC destino
 
 Agora no computador que receberá os dados podemos executar o MQTT subscriber
 
