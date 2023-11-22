@@ -50,7 +50,7 @@ O script pode ser enviado ao background do bash com o comando abaixo:
 nohup python3 main.py localhost &
 ```
 
-Dessa forma o script permanecerá em execução mesmo que você se deslogue do servidor
+Dessa forma o script permanecerá em execução mesmo que você se deslogue do bash
 
 ### Executando o Client no PC destino
 
